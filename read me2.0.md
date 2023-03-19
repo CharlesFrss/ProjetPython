@@ -61,7 +61,10 @@ Les résultats des scans sont exportés indépendamment dans un fichier texte, l
 
 4. Recherche de Dorks
 
-Cette option permet d'effectuer une recherche de dorks Google en utilisant un nom d'entreprise, un nom d'utilisateur ou une adresse e-mail. Les résultats de la recherche sont exportés dans un fichier texte. Pour lancer une recherche de DORKS sur des entreprises et des utilisateurs, sélectionnez l'option correspondante dans le menu principal. Vous serez invité à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher. Le programme effectuera ensuite une recherche Google à l'aide de la requête `intext:"{company_name}" OR intext:"{username}" OR intext:"{email}" site:linkedin.com OR site:glassdoor.com OR site:zoominfo.com site:facebook.com OR site
+Cette option permet d'effectuer une recherche de dorks Google en utilisant un nom d'entreprise, un nom d'utilisateur ou une adresse e-mail. Les résultats de la recherche sont exportés dans un fichier texte. Pour lancer une recherche de DORKS sur des entreprises et des utilisateurs, sélectionnez l'option correspondante dans le menu principal. Vous serez invité à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher. Le programme effectuera ensuite une recherche Google à l'aide de la requête `intext:"{company_name}" OR intext:"{username}" OR intext:"{email}" site:linkedin.com OR site:glassdoor.com OR site:zoominfo.com site:facebook.com OR site`
+Cette fonction peux être modifiée en fonction des besoins souhaité notamment en ajoutant des en-tête permettant d'utliser d'autre navigateur web et en modifiant le time sleep qui peux augmenter le nombre de résultats.
+Il est recommandé d'utiliser un proxy ou un VPN dans le but d'éviter tout blocage/banissement des navigateurs webs.
+
 
 5. OSINT
 
@@ -74,6 +77,9 @@ Cette option permet de récupérer les adresses e-mail associées à un nom de d
 7. Veille sécurité (Scrapping)
 
 Cette option effectue une veille de la sécurité en extrayant les CVEC les plus récentes présentes sur le site Web de NIST (National Institute of Standards and Technology) et les exporte dans un fichier texte.
+Elle utilise la bibliothèque Beautifullsoup4 afin de pouvoir parser le code HTML souhaité.
+Il est donc possible de modifier le code afin de pouvoir parser d'autres sites en se référant aux différentes balises HTML présentes sur ce dernier.
+Cependant certains site n'autorise pas ce genre de méthode et peuvent donc bloquer la requête.
 
 8. Dorks domaine name
 
