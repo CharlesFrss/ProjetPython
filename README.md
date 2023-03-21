@@ -42,6 +42,9 @@ pip3 install beautifulsoup4
 ## Installation
 
 1. Cloner ce repository sur votre machine locale
+```bash
+git clone https://github.com/CharlesFrss/ProjetPython.git
+```
 2. Installer les prérequis ci-dessus
 2.1 Se rendre dans le dossier ProjetPython
 ```bash
