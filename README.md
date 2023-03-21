@@ -7,13 +7,14 @@ Il permet de tester la sécurité des systèmes informatiques comme scanner les 
 ## Prérequis
 
 Pour une utilisation optimale il est recommandé d’utiliser ce script sur une distribution Parrot. L’ensemble du développement a été réalisé sur cette dernière ce qui assurera son bon fonctionnement. Une partie des dépendances mentionné ci-dessous sont déjà installer sur la Parrot.
+Pour autant le script comporte les commandes nécessaires et le lancement de ce dernier installe les dépendances nécessaires automatiquement. Cependant elles sont tout de même mentionnée à titre informatif et en cas de bug du script.
 
 - Python 3
-- python3-pip
-- python-nmap (installé via pip3 install python-nmap) : un scanner de port open source.
-- googlesearch-python (installé via pip3 install googlesearch-python) : une bibliothèque pour effectuer des recherches sur Google.
-- python-whois (installé via pip3 install python-whois) : une bibliothèque pour obtenir des informations sur les noms de domaine.
-- beautifulsoup4 (installé via pip3 install beautifulsoup4) : une bibliothèque pour extraire des informations à partir de pages Web.
+- Python3 pip `sudo apt-get python3-pip`
+- python-nmap (installé via `pip3 install python-nmap`) : un scanner de port open source.
+- googlesearch-python (installé via `pip3 install googlesearch-python`) : une bibliothèque pour effectuer des recherches sur Google.
+- python-whois (installé via `pip3 install python-whois`) : une bibliothèque pour obtenir des informations sur les noms de domaine.
+- beautifulsoup4 (installé via `pip3 install beautifulsoup4`) : une bibliothèque pour extraire des informations à partir de pages Web.
 - emailharvester : une bibliothèque pour récupérer les adresses e-mail à partir d'un nom de domaine.
 
 
