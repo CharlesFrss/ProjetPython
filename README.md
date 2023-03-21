@@ -51,7 +51,7 @@ Le programme se compose de plusieurs fonctions :
 
 - Scan des ports ouverts pour une adresse IP donnée avec nmap
 - Scan de vulnérabilités avancé avec nmap
-- Scan de vulnérabilités avec nikto
+- Scan de vulnérabilités Web avec nikto
 - Utilisation de Dorks pour rechercher des informations sur une entreprise, un nom d'utilisateur ou une adresse e-mail
 - Investigation OSINT sur des noms de domaines
 - Scan d'email harvesting
