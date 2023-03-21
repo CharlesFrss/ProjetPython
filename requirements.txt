@@ -1,0 +1,4 @@
+nmap
+googlesearch-python
+python-whois
+beautifulsoup4
