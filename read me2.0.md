@@ -2,7 +2,7 @@
 
 Ce programme est un ensemble d'outils de sécurité destiné aux tests de pénétration et à la sécurité des réseaux. Il utilise les bibliothèques Python pour lancer des scans de ports, de vulnérabilités et d'emails, et pour effectuer des recherches d'informations sur les noms de domaine.
 
-Il permet de tester la sécurité des systèmes informatiques comme scanner les ports ouverts, détecter les vulnérabilités et d'effectuer des scans Nikto sur une adresse IP cible. Il a également la capacité de collecter des informations via de l’OSINT sur des noms de domaines et des entreprises de manière efficace. Il utilise plusieurs dépendances telles que nmap, googlesearch-python, python-whois et beautifulsoup4.
+Il permet de tester la sécurité des systèmes informatiques comme scanner les ports ouverts, détecter les vulnérabilités et d'effectuer des scans Nikto sur une adresse IP cible. Il a également la capacité de collecter des informations via de l’OSINT sur des noms de domaines, des entreprises ainsi que des vulnérabilités nouvellement plubliées de manière efficace. Il utilise plusieurs dépendances telles que nmap, googlesearch-python, python-whois et beautifulsoup4.
 
 ## Prérequis
 
@@ -21,30 +21,23 @@ Pour une utilisation optimale il est recommandé d’utiliser ce script sur une 
 
 1. Cloner ce repository sur votre machine locale
 2. Installer les prérequis ci-dessus
-3. Exécuter le script à l'aide de Python 3 en utilisant la commande `python3 advanced_nmap.py`
+3. Exécuter le script à l'aide de Python 3 en utilisant la commande `python3 nom du script.py`
 
 ## Fonctionnalités
 
 Le programme se compose de plusieurs fonctions :
 
-- Scan des ports ouverts avec nmap
+- Scan des ports ouverts pour une adresse IP donnée avec nmap
 - Scan de vulnérabilités avancé avec nmap
 - Scan de vulnérabilités avec nikto
-- Recherche de DORKS sur des entreprises et des utilisateurs
+- Utilisation de Dorks pour rechercher des informations sur une entreprise, un nom d'utilisateur ou une adresse e-mail
 - Investigation OSINT sur des noms de domaines
 - Scan d'email harvesting
 - Recherche de CVEC up-to-date via du scrapping web sur le site de NIST
-- Scan Nmap de base pour une adresse IP
-- Scan Nmap avancé pour détecter les vulnérabilités sur une adresse IP
-- Scan Nikto pour une adresse IP
-- Collecte d'informations OSINT (Open Source Intelligence) pour un nom de domaine
-- Collecte d'adresses e-mail à partir d'un nom de domaine
-- Utilisation de Dorks pour rechercher des informations sur une entreprise, un nom d'utilisateur ou une adresse e-mail
 
 ## Utilisation
 
-Pour utiliser le programme, exécutez simplement le fichier security.py avec Python 3 :
-
+Pour utiliser le programme, exécutez simplement le fichier nomduscript.py avec Python 3 :
 
 Le programme propose les options suivantes :
 
@@ -88,7 +81,6 @@ Cette fonction prend en entrée un nom de domaine et effectue une recherche de d
 
 ## Auteur
 Ce programme a été écrit par [Nom de l'auteur] et a été créé à des fins éducatives uniquement. Veuillez utiliser ce programme de manière responsable et avec la permission des propriétaires des systèmes que vous scannez. L'auteur ne sera pas tenu responsable de toute utilisation abusive ou illégale de ce programme.
-
 
 
 ## Avertissement
