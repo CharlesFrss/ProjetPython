@@ -52,7 +52,7 @@ cd ProjetPython
 ```
 Lancer le script d'installation des dépendances
 ```bash
-dependencies.py
+python3 dependencies.py
 ```
 3. Exécuter le script à l'aide de Python 3 en utilisant la commande
 ```bash
