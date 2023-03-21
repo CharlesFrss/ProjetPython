@@ -7,7 +7,7 @@ import sys
 os.system("sudo apt-get update")
 os.system("sudo apt-get install nmap")
 os.system("sudo apt-get install python3-pip")
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 
 import nmap
 from googlesearch import search
