@@ -43,6 +43,14 @@ pip3 install beautifulsoup4
 
 1. Cloner ce repository sur votre machine locale
 2. Installer les prérequis ci-dessus
+2.1 Se rendre dans le dossier ProjetPython
+```bash
+cd ProjetPython
+```
+Lancer le script d'installation des dépendances
+```bash
+pip3 install beautifulsoup4
+```
 3. Exécuter le script à l'aide de Python 3 en utilisant la commande `python3 nom du script.py`
 
 ## Fonctionnalités
