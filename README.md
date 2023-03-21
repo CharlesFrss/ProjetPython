@@ -84,7 +84,9 @@ Les résultats des scans sont exportés indépendamment dans un fichier texte, l
 Cette option permet d'effectuer une recherche de dorks Google en utilisant un nom d'entreprise, un nom d'utilisateur ou une adresse e-mail. Pour lancer une recherche de DORKS sur des entreprises et des utilisateurs, sélectionnez l'option correspondante dans le menu principal:
 `2. OSINT` puis `1. GOOGLE DORKS`
 
-Vous serez invité à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher. Le programme effectuera ensuite une recherche Google à l'aide de la requête `intext:"{company_name}" OR intext:"{username}" OR intext:"{email}" site:linkedin.com OR site:glassdoor.com OR site:zoominfo.com site:facebook.com OR site:twitter.com OR site:instagram.com OR site:pinterest.com OR site:crunchbase.com OR site:hunter.io OR site:owler.com OR site:data.com OR site:hoovers.com site:*.example.com" OR site`
+Vous serez invité à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher.
+Notez qu'il est possible de ne renseigner que certaines donné par exemple juste une adresse mail ou une entreprise.
+Le programme effectuera ensuite une recherche Google à l'aide de la requête `intext:"{company_name}" OR intext:"{username}" OR intext:"{email}" site:linkedin.com OR site:glassdoor.com OR site:zoominfo.com site:facebook.com OR site:twitter.com OR site:instagram.com OR site:pinterest.com OR site:crunchbase.com OR site:hunter.io OR site:owler.com OR site:data.com OR site:hoovers.com site:*.example.com" OR site`
 
 Ce choix execute également un recherche qui prend en entrée un nom de domaine et effectue une recherche de différents types de fichiers liés à ce domaine (PDF, XLS, DOC, PPT, CSV) en utilisant différents opérateurs Google (site, intitle, inurl, filetype). Les résultats sont affichés à l'écran.
 
