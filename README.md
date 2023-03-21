@@ -81,7 +81,7 @@ Les résultats des scans sont exportés indépendamment dans un fichier texte, l
 
 3. Recherche de Dorks
 
-Cette option permet d'effectuer une recherche de dorks Google en utilisant un nom d'entreprise, un nom d'utilisateur ou une adresse e-mail. Les résultats de la recherche sont exportés dans un fichier texte grâce à la définition `export_result3`. Pour lancer une recherche de DORKS sur des entreprises et des utilisateurs, sélectionnez l'option correspondante dans le menu principal:
+Cette option permet d'effectuer une recherche de dorks Google en utilisant un nom d'entreprise, un nom d'utilisateur ou une adresse e-mail. Pour lancer une recherche de DORKS sur des entreprises et des utilisateurs, sélectionnez l'option correspondante dans le menu principal:
 `2. OSINT` puis `1. GOOGLE DORKS`
 
 Vous serez invité à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher. Le programme effectuera ensuite une recherche Google à l'aide de la requête `intext:"{company_name}" OR intext:"{username}" OR intext:"{email}" site:linkedin.com OR site:glassdoor.com OR site:zoominfo.com site:facebook.com OR site:twitter.com OR site:instagram.com OR site:pinterest.com OR site:crunchbase.com OR site:hunter.io OR site:owler.com OR site:data.com OR site:hoovers.com site:*.example.com" OR site`
@@ -96,13 +96,15 @@ Les résultats des scans sont exportés indépendamment dans un fichier texte, l
 
 4. OSINT
 
-Cette option permet d'obtenir des informations sur un nom de domaine en utilisant la bibliothèque Python-whois. Cette fonction prend en entrée un nom de domaine et effectue une recherche WHOIS pour obtenir des informations sur ce domaine, telles que le nom de domaine, le registrar, la date d'expiration, la date de création, les serveurs de noms et le statut. Elle exporte également les résultats dans un fichier texte.
-
-5. Scan d'email (emailharvester)
+Cette option permet d'obtenir des informations sur un nom de domaine en utilisant la bibliothèque Python-whois.
+Pour lancer une recherche d'OSINT sur des nom de domaine, sélectionnez l'option correspondante dans le menu principal:
+`2. OSINT` puis `2. Domaine et email`
+Cette fonction prend en entrée un nom de domaine et effectue une recherche WHOIS pour obtenir des informations sur ce domaine, telles que le nom de domaine, le registrar, la date d'expiration, la date de création, les serveurs de noms et le statut. Elle exporte également les résultats dans un fichier texte grâce à la définition `export_result2`.
 
 Cette option permet de récupérer les adresses e-mail associées à un nom de domaine donné. Elle prend en entrée un nom de domaine et recherche toutes les adresses e-mail associées à ce domaine en utilisant l'outil EmailHarvester. Elle exporte ensuite les adresses e-mail trouvées dans un fichier texte.
 
-6. Veille sécurité (Scrapping)
+
+5. Veille sécurité (Scrapping)
 
 Cette option effectue une veille de la sécurité en extrayant les CVEC les plus récentes présentes sur le site Web de NIST (National Institute of Standards and Technology) et les exporte dans un fichier texte.
 Elle utilise la bibliothèque Beautifullsoup4 afin de pouvoir parser le code HTML souhaité.
@@ -110,14 +112,8 @@ Il est donc possible de modifier le code afin de pouvoir parser d'autres sites e
 Cependant certains site n'autorise pas ce genre de méthode et peuvent donc bloquer la requête.
 
 
-
-
 ## Auteur
-Ce programme a été écrit par [Nom de l'auteur] et a été créé à des fins éducatives uniquement. Veuillez utiliser ce programme de manière responsable et avec la permission des propriétaires des systèmes que vous scannez. L'auteur ne sera pas tenu responsable de toute utilisation abusive ou illégale de ce programme.
 
-
-## Avertissement
-Cet outil est destiné à des fins éducatives et de recherche uniquement. L'utilisation de cet outil sur des systèmes qui ne vous appartiennent pas est illégale sans autorisation préalable. L'auteur ne sera pas tenu responsable de tout dommage causé par une utilisation inappropriée de cet outil.
-
-Ce programme est fourni "tel quel" sans aucune garantie. Il est destiné à des fins éducatives et doit être utilisé avec précaution et avec l'autorisation du propriétaire du système ou du réseau testé. L'auteur décline toute responsabilité pour toute utilisation abusive de ce programme.
+Ce programme a été écrit par Charles Fresse et a été créé à des fins éducatives uniquement. Il est fourni "tel quel" sans aucune garantie. Veuillez utiliser ce programme de manière responsable et avec la permission des propriétaires des systèmes que vous scannez. L'auteur ne sera pas tenu responsable de toute utilisation abusive ou illégale de ce programme.
 De plus, certaines fonctionnalités peuvent être considérées comme intrusives ou illégales dans certaines juridictions. Il est de la responsabilité de l'utilisateur
+
