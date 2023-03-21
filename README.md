@@ -107,9 +107,10 @@ Cette option permet de récupérer les adresses e-mail associées à un nom de d
 5. Veille sécurité (Scrapping)
 
 Cette option effectue une veille de la sécurité en extrayant les CVEC les plus récentes présentes sur le site Web de NIST (National Institute of Standards and Technology) et les exporte dans un fichier texte.
-Elle utilise la bibliothèque Beautifullsoup4 afin de pouvoir parser le code HTML souhaité.
+Elle utilise la bibliothèque Beautifulsoup4 afin de pouvoir parser le code HTML souhaité.
 Il est donc possible de modifier le code afin de pouvoir parser d'autres sites en se référant aux différentes balises HTML présentes sur ce dernier.
 Cependant certains site n'autorise pas ce genre de méthode et peuvent donc bloquer la requête.
+Les résultats son exportés dans un fichier texte.
 
 
 ## Auteur
