@@ -49,7 +49,7 @@ cd ProjetPython
 ```
 Lancer le script d'installation des dépendances
 ```bash
-pip3 install beautifulsoup4
+dependencies.py
 ```
 3. Exécuter le script à l'aide de Python 3 en utilisant la commande `python3 nom du script.py`
 
