@@ -166,17 +166,13 @@ def emailharvester(domain_name):
     # Afficher les adresses e-mail trouvées
     for email in emails:
         print(email)
-
+        
+    content = "\n".join(emails)
     # Exporter les adresses email dans un fichier
     filename = f"email_{domain_name}.txt"
-    try:
-        with open(filename, "w") as file:
-            file.write("\n".join(emails))
-    except Exception as e:
-        print(f"Erreur lors de l'exportation : {e}")
-        return
-    print(f"{len(emails)} adresses email trouvées. Exporté dans le fichier {filename}.")
-    
+   
+# Exporte les résultats dans un fichier texte en utilisant la fonction export_result2
+    export_result2(filename, content, domain_name)
 
 
 def veille_sécurité():
