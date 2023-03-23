@@ -212,22 +212,16 @@ def veille_sécurité():
         print("Aucun élément 'li' trouvé à l'intérieur de la div.")
         return
 # Concaténation des textes de tous les éléments "li" en une seule chaîne de caractères
-    informations = ""
+    content = ""
     for li in lis:
-        informations += li.text + "\n"
+        content += li.text + "\n"
+
 #import de la date et heure pour le nom du fichier
     date_now = datetime.datetime.now().strftime("%Y-%m-%d")
     filename = f"veille_securite_{date_now}.txt"
 
-    try:
-# Exportation des informations dans le fichier
-        with open(filename, "w") as f:
-            f.write(informations)
-        print(f"Les informations de la veille sécurité ont été exportées dans le fichier {filename} dans le dossier ProjetPython")
-    except IOError as err:
-        print(f"Une erreur s'est produite lors de l'exportation des informations: {err}")
-        return
-
+    
+    export_result3(filename,content)
 
 def dorks_domaine():
     
