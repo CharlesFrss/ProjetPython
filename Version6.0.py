@@ -247,7 +247,7 @@ def dorks_domaine():
     # cela évite d'écraser les recherches précedentes
     timestamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
     filename = f"urls-{domain_name}-{timestamp}.txt"
-
+    url_list = []
 # Chaque requête dans la liste dorks est envoyée à Google avec un agent utilisateur choisi au hasard. 
 # Le contenu de la réponse est analysé pour extraire les URL, qui sont ensuite écrites dans le fichier
 
@@ -262,11 +262,10 @@ def dorks_domaine():
             for result in results:
                 if "google.com" not in result:
                     print(result)
-                    f.write(result + "\n")
-
             time.sleep(random.uniform(4, 10))
-            
-    print(f"Les résultats ont été enregistrés dans le fichier {filename}.")
+    content = "\n".join(url_list)
+    export_result2(filename, content, domain_name)
+    
 
 # La boucle while maintient le menu en cours d'exécution jusqu'à ce que l'utilisateur choisisse de quitter.
 while True:
