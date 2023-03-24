@@ -121,20 +121,26 @@ def export_result(filename, content, ip):
 # Le nom de fichier est personnalisé en utilisant le nom de domaine
 def export_result2(filename, content, domain_name):
     chemin_machine = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
+# Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
     chemin_fichier = os.path.join(chemin_machine, filename)
     try:
         with open(chemin_fichier, 'w') as f:
+# Ouvre le fichier en mode écriture et écrit le contenu
             f.write(content)
+# Confirmation de la création du fichier avec le nom ainsi que le chemin
         print(f"Le fichier {filename} a été créé avec succès dans {chemin_machine}.")
     except Exception as e:
         print(f"Erreur lors de la création du fichier: {e}")
-
+        
 def export_result3(filename, content):
     chemin_machine = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
+# Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
     chemin_fichier = os.path.join(chemin_machine, filename)
     try:
         with open(chemin_fichier, 'w') as f:
+# Ouvre le fichier en mode écriture et écrit le contenu
             f.write(content)
+# Confirmation de la création du fichier avec le nom ainsi que le chemin
         print(f"Le fichier {filename} a été créé avec succès dans {chemin_machine}.")
     except Exception as e:
         print(f"Erreur lors de la création du fichier: {e}")
