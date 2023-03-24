@@ -81,7 +81,7 @@ Le programme propose les options suivantes :
 
 Pour lancer un scan de ports et de vulnérabilités avec nmap, sélectionnez l'option correspondante dans le menu principal.
 Faire le choix `1. Test d'intrusion` puis `1. SCAN RAPIDE`
-Vous serez invité à entrer l'adresse IP de la cible. Le programme effectuera ensuite un scan des ports 1 à 1024 et affichera les résultats. Le scan peut être personnalisé en modifiant les options passées à `sc.scan()`. Les résultats du scan sont exportés dans un fichier texte grâce à la définition `export_result`.
+Vous serez invité à entrer l'adresse IP de la cible. Le programme effectuera ensuite un scan des ports 1 à 1024 et affichera les résultats. Le scan peut être personnalisé en modifiant les options passées à `sc.scan()`. Les résultats du scan sont exportés dans un fichier texte grâce à la définition `export_nmap_results`.
 
 2. Scan de vulnérabilité Nmap avancé + Nikto
 
@@ -107,7 +107,7 @@ Ce choix execute également un recherche qui prend en entrée un nom de domaine 
 Ces fonction peuvent être modifiée en fonction des besoins souhaité notamment en ajoutant des en-tête permettant d'utliser d'autre navigateur web, en modifiant les sites souhaités ainsi que le time sleep qui peux augmenter le nombre de résultats.
 Il est recommandé d'utiliser un proxy ou un VPN dans le but d'éviter tout blocage/banissement des navigateurs webs.
 
-Les résultats des scans sont exportés indépendamment dans un fichier texte, le chemin est affiché à la fin de chaque processus grâce à la définition `export_result3` et un ajout à la suite de la fonction `dorks_domaine`.
+Les résultats des scans sont exportés indépendamment dans un fichier texte, le chemin est affiché à la fin de chaque processus grâce à la définition `export_result3`
 
 
 4. OSINT
@@ -117,7 +117,7 @@ Pour lancer une recherche d'OSINT sur des nom de domaine, sélectionnez l'option
 `2. OSINT` puis `2. Domaine et email`
 Cette fonction prend en entrée un nom de domaine et effectue une recherche WHOIS pour obtenir des informations sur ce domaine, telles que le nom de domaine, le registrar, la date d'expiration, la date de création, les serveurs de noms et le statut. Elle exporte également les résultats dans un fichier texte grâce à la définition `export_result2`.
 
-Cette option permet de récupérer les adresses e-mail associées à un nom de domaine donné. Elle prend en entrée un nom de domaine et recherche toutes les adresses e-mail associées à ce domaine en utilisant l'outil EmailHarvester. Elle exporte ensuite les adresses e-mail trouvées dans un fichier texte.
+Cette option permet de récupérer les adresses e-mail associées à un nom de domaine donné. Elle prend en entrée un nom de domaine et recherche toutes les adresses e-mail associées à ce domaine en utilisant l'outil EmailHarvester. Elle exporte ensuite les adresses e-mail trouvées dans un fichier texte grâce à la définition `export_result2`.
 
 
 5. Veille sécurité (Scrapping)
@@ -126,7 +126,7 @@ Cette option effectue une veille de la sécurité en extrayant les CVEC les plus
 Elle utilise la bibliothèque Beautifulsoup4 afin de pouvoir parser le code HTML souhaité.
 Il est donc possible de modifier le code afin de pouvoir parser d'autres sites en se référant aux différentes balises HTML présentes sur ce dernier.
 Cependant certains site n'autorise pas ce genre de méthode et peuvent donc bloquer la requête.
-Les résultats son exportés dans un fichier texte.
+Les résultats son exportés dans un fichier texte grâce à la définition `export_result3`.
 
 
 ## Auteur
