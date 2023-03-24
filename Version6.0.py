@@ -23,20 +23,52 @@ sc = nmap.PortScanner()
 
 # Cette fonction permet d'effectuer un scan NMAP sur une adresse IP cible et d'enregistrer les résultats dans un fichier texte.
 # Les numéros de ports ouverts sont également affichés à l'utilisateur.
+import os
+import json
+
 def scan():
     print("Bienvenue dans l'outil de scan NMAP")
     ip = input("Ajouter l'adresse IP cible: ")
-    #try et except permet la gestion d'erreur
+    # try et except permet la gestion d'erreur
     try:
         sc.scan(ip, '1-1024')
         print(sc.scaninfo())
         print(sc[ip]['tcp'].keys())
-        scan_results = str(sc[ip])
-        filename = f"nmap_{ip}.txt"
-        export_result(filename, scan_results, ip)
+        scan_results = sc[ip]
+        formatted_results = {}
+        for port, info in scan_results['tcp'].items():
+            port_info = {
+                'state': info['state'],
+                'name': info['name'],
+                'product': info['product'],
+                'version': info['version'],
+                'extrainfo': info['extrainfo']
+            }
+            formatted_results[port] = port_info
+        export_nmap_results(f"nmap_{ip}.txt", formatted_results)
     except Exception as e:
-# En cas d'erreur, affiche un message d'erreur avec l'exception levée
+        # En cas d'erreur, affiche un message d'erreur avec l'exception levée
         print(f"Erreur lors du scan NMAP: {e}")
+        
+def export_nmap_results(filename, results_dict):
+    # Determine le chemin du dossier Bureau de l'utilisateur actuel
+    chemin_projet = os.path.join(os.path.join(os.path.expanduser('~')), 'ProjetPython')
+    # Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
+    chemin_resultat = os.path.join(chemin_projet, 'resultat')
+    if not os.path.exists(chemin_resultat):
+        os.makedirs(chemin_resultat)
+    chemin_fichier = os.path.join(chemin_resultat, filename)
+    try:
+        with open(chemin_fichier, "w") as f:
+            f.write("TCP Port Scan Results:\n")
+            for port, port_data in results_dict.items():
+                f.write(f"Port {port} is {port_data['state']} - {port_data['name']} ({port_data['product']} {port_data['version']})\n")
+            f.write("\n")
+            f.write(f"Full Scan Results:\n{json.dumps(results_dict, indent=4)}")
+        print(f"Les résultats du scan ont été exportés dans le fichier {chemin_fichier}")
+    except Exception as e:
+        print(f"Erreur lors de l'exportation des résultats: {e}")
+
 
 # Cette fonction permet d'effectuer un scan de vulnérabilité avancé en utilisant la commande nmap sur une adresse IP cible
 def vulnerabilité(ip):
