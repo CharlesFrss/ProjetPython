@@ -9,7 +9,7 @@ import subprocess
 #os.system("sudo apt-get install python3-pip")
 #subprocess.call(['pip3', 'install', '-r', 'requirements.txt'])
 #pip install -r requirements.txt
-
+import json
 import nmap
 from googlesearch import search
 import whois
