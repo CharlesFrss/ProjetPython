@@ -56,7 +56,7 @@ python3 dependencies.py
 ```
 3. Exécuter le script à l'aide de Python 3 en utilisant la commande
 ```bash
-python3 Version6.0.py
+python3 SecurityScan.py
 ```
 
 ## Fonctionnalités
@@ -73,7 +73,7 @@ Le programme se compose de plusieurs fonctions :
 
 ## Utilisation
 
-Pour utiliser le programme, exécutez simplement le fichier nomduscript.py avec Python 3 :
+Pour utiliser le programme, exécutez simplement le fichier SecurityScan.py avec Python 3 :
 
 Le programme propose les options suivantes :
 
