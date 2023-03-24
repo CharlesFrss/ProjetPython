@@ -34,7 +34,9 @@ def scan():
         sc.scan(ip, '1-1024')
         print(sc.scaninfo())
         print(sc[ip]['tcp'].keys())
+ #crée une variable appelée scan_results qui contient les résultats du scan pour l'adresse IP cible.
         scan_results = sc[ip]
+ #Ces lignes formatent les résultats du scan dans un dictionnaire avec les informations de chaque port scanné.
         formatted_results = {}
         for port, info in scan_results['tcp'].items():
             port_info = {
@@ -55,6 +57,7 @@ def export_nmap_results(filename, results_dict):
     chemin_projet = os.path.join(os.path.join(os.path.expanduser('~')), 'ProjetPython')
     # Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
     chemin_resultat = os.path.join(chemin_projet, 'resultat')
+    # Crée un dossier resultat dans le dossier ProjetPython si ce dernier n'existe pas.
     if not os.path.exists(chemin_resultat):
         os.makedirs(chemin_resultat)
     chemin_fichier = os.path.join(chemin_resultat, filename)
@@ -64,6 +67,7 @@ def export_nmap_results(filename, results_dict):
             for port, port_data in results_dict.items():
                 f.write(f"Port {port} is {port_data['state']} - {port_data['name']} ({port_data['product']} {port_data['version']})\n")
             f.write("\n")
+     #Les résultats complets sont écrits en format JSON à l'aide de la fonction json.dumps et avec une indentation de 4 espaces.
             f.write(f"Full Scan Results:\n{json.dumps(results_dict, indent=4)}")
         print(f"Les résultats du scan ont été exportés dans le fichier {chemin_fichier}")
     except Exception as e:
