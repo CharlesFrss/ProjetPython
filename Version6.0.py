@@ -103,16 +103,20 @@ def nikto(ip):
 # Cette fonction permet de créer un fichier texte. 
 # Le nom de fichier est personnalisé en utilisant l'adresse IP cible
 def export_result(filename, content, ip):
-# Determine le chemin du dossier Bureau de l'utilisateur actuel
-    chemin_machine = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
-# Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
-    chemin_fichier = os.path.join(chemin_machine, filename)
+    # Determine le chemin du dossier Bureau de l'utilisateur actuel
+    chemin_projet = os.path.join(os.path.join(os.path.expanduser('~')), 'ProjetPython')
+    # Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
+    chemin_resultat = os.path.join(chemin_projet, 'resultat')
+    # Crée un dossier resultat dans le dossier ProjetPython si ce dernier n'existe pas.
+    if not os.path.exists(chemin_resultat):
+        os.makedirs(chemin_resultat)
+    chemin_fichier = os.path.join(chemin_resultat, filename)
     try:
         with open(chemin_fichier, 'w') as f:
-# Ouvre le fichier en mode écriture et écrit le contenu
+            # Ouvre le fichier en mode écriture et écrit le contenu
             f.write(content)
-# Confirmation de la création du fichier avec le nom ainsi que le chemin
-        print(f"Le fichier {filename} a été créé avec succès dans {chemin_machine}.")
+            # Confirmation de la création du fichier avec le nom ainsi que le chemin
+        print(f"Le fichier {filename} a été créé avec succès dans {chemin_fichier}.")
     except Exception as e:
         print(f"Erreur lors de la création du fichier: {e}")
 
@@ -120,31 +124,40 @@ def export_result(filename, content, ip):
 # Cette fonction permet de créer un fichier texte. 
 # Le nom de fichier est personnalisé en utilisant le nom de domaine
 def export_result2(filename, content, domain_name):
-    chemin_machine = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
-# Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
-    chemin_fichier = os.path.join(chemin_machine, filename)
+    # Determine le chemin du dossier Bureau de l'utilisateur actuel
+    chemin_projet = os.path.join(os.path.join(os.path.expanduser('~')), 'ProjetPython')
+    # Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
+    chemin_resultat = os.path.join(chemin_projet, 'resultat')
+    # Crée un dossier resultat dans le dossier ProjetPython si ce dernier n'existe pas.
+    if not os.path.exists(chemin_resultat):
+        os.makedirs(chemin_resultat)
+    chemin_fichier = os.path.join(chemin_resultat, filename)
     try:
         with open(chemin_fichier, 'w') as f:
-# Ouvre le fichier en mode écriture et écrit le contenu
+            # Ouvre le fichier en mode écriture et écrit le contenu
             f.write(content)
-# Confirmation de la création du fichier avec le nom ainsi que le chemin
-        print(f"Le fichier {filename} a été créé avec succès dans {chemin_machine}.")
+            # Confirmation de la création du fichier avec le nom ainsi que le chemin
+        print(f"Le fichier {filename} a été créé avec succès dans {chemin_fichier}.")
     except Exception as e:
         print(f"Erreur lors de la création du fichier: {e}")
         
 def export_result3(filename, content):
-    chemin_machine = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
-# Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
-    chemin_fichier = os.path.join(chemin_machine, filename)
+    # Determine le chemin du dossier Bureau de l'utilisateur actuel
+    chemin_projet = os.path.join(os.path.join(os.path.expanduser('~')), 'ProjetPython')
+    # Determine le chemin complet du fichier en combinant le chemin du dossier Bureau et le nom de fichier
+    chemin_resultat = os.path.join(chemin_projet, 'resultat')
+    # Crée un dossier resultat dans le dossier ProjetPython si ce dernier n'existe pas.
+    if not os.path.exists(chemin_resultat):
+        os.makedirs(chemin_resultat)
+    chemin_fichier = os.path.join(chemin_resultat, filename)
     try:
         with open(chemin_fichier, 'w') as f:
-# Ouvre le fichier en mode écriture et écrit le contenu
+            # Ouvre le fichier en mode écriture et écrit le contenu
             f.write(content)
-# Confirmation de la création du fichier avec le nom ainsi que le chemin
-        print(f"Le fichier {filename} a été créé avec succès dans {chemin_machine}.")
+            # Confirmation de la création du fichier avec le nom ainsi que le chemin
+        print(f"Le fichier {filename} a été créé avec succès dans {chemin_fichier}.")
     except Exception as e:
         print(f"Erreur lors de la création du fichier: {e}")
-
 
 # Cette fonction permet d'effectuer une recherche Google dorks en utilisant les informations fournies par l'utilisateur.
 def DORKS():
