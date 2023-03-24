@@ -289,6 +289,12 @@ def dorks_domaine():
         "filetype:csv site:{}".format(domain_name),
         "filetype:txt site:{}".format(domain_name),
         "filetype:conf site:{}".format(domain_name),
+        "site:www.{}".format(domain_name),
+        "site:secure.{}".format(domain_name),
+        "site:admin.{}".format(domain_name),
+        "intitle:\"login\" site:{}".format(domain_name),
+        "intitle:\"admin\" site:{}".format(domain_name),
+        "intitle:\"index of\" site:{}".format(domain_name),
     ]
 # Une liste d'agents utilisateurs est créée. Ces chaînes de caractères sont utilisées pour simuler différents navigateurs Web lors de l'envoi de requêtes à Google.
     user_agents = [
@@ -316,6 +322,7 @@ def dorks_domaine():
 
             for result in results:
                 if "google.com" not in result:
+                    url_list.append(result)
                     print(result)
             time.sleep(random.uniform(4, 10))
     content = "\n".join(url_list)
