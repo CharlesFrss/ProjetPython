@@ -312,8 +312,7 @@ def dorks_domaine():
 # Chaque requête dans la liste dorks est envoyée à Google avec un agent utilisateur choisi au hasard. 
 # Le contenu de la réponse est analysé pour extraire les URL, qui sont ensuite écrites dans le fichier
 
-    with open(filename, "w") as f:
-        for dork in dorks:
+    for dork in dorks:
             url = "https://www.google.com/search?q={}".format(dork)
             headers = {"User-Agent": random.choice(user_agents)}
             response = requests.get(url, headers=headers)
