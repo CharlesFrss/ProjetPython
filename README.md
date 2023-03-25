@@ -6,8 +6,8 @@ Il permet de tester la sécurité des systèmes informatiques comme scanner les 
 
 ## Prérequis
 
-Pour une utilisation optimale il est recommandé d’utiliser ce script sur une distribution Parrot. L’ensemble du développement a été réalisé sur cette dernière ce qui assurera son bon fonctionnement. Une partie des dépendances mentionné ci-dessous sont déjà installer sur la Parrot.
-Pour autant le script comporte les commandes nécessaires et le lancement de ce dernier installe les dépendances nécessaires automatiquement. Cependant elles sont tout de même mentionnée à titre informatif et en cas de bug du script.
+Pour une utilisation optimale il est recommandé d’utiliser ce script sur une distribution Parrot. L’ensemble du développement a été réalisé sur cette dernière ce qui assurera son bon fonctionnement. Une partie des dépendances mentionnée ci-dessous est déjà installée sur la Parrot.
+Pour autant le script comporte les commandes nécessaires et le lancement de ce dernier installe les dépendances nécessaires automatiquement. Cependant elles sont tout de même mentionnées à titre informatif et en cas de bug du script.
 
 - Python 3
  ```bash
@@ -81,7 +81,7 @@ Le programme propose les options suivantes :
 
 Pour lancer un scan de ports et de vulnérabilités avec nmap, sélectionnez l'option correspondante dans le menu principal.
 Faire le choix `1. Test d'intrusion` puis `1. SCAN RAPIDE`
-Vous serez invité à entrer l'adresse IP de la cible. Le programme effectuera ensuite un scan des ports 1 à 1024 et affichera les résultats. Le scan peut être personnalisé en modifiant les options passées à `sc.scan()`. Les résultats du scan sont exportés dans un fichier texte grâce à la définition `export_nmap_results`.
+Vous serez invités à entrer l'adresse IP de la cible. Le programme effectuera ensuite un scan des ports 1 à 1024 et affichera les résultats. Le scan peut être personnalisé en modifiant les options passées à `sc.scan()`. Les résultats du scan sont exportés dans un fichier texte grâce à la définition `export_nmap_results`.
 
 2. Scan de vulnérabilité Nmap avancé + Nikto
 
@@ -98,13 +98,13 @@ Les résultats des scans sont exportés indépendamment dans un fichier texte, l
 Cette option permet d'effectuer une recherche de dorks Google en utilisant un nom d'entreprise, un nom d'utilisateur ou une adresse e-mail. Pour lancer une recherche de DORKS sur des entreprises et des utilisateurs, sélectionnez l'option correspondante dans le menu principal:
 `2. OSINT` puis `1. GOOGLE DORKS`
 
-Vous serez invité à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher.
-Notez qu'il est possible de ne renseigner que certaines donné par exemple juste une adresse mail ou une entreprise.
+Vous serez invités à entrer le nom de l'entreprise, le nom d'utilisateur et l'adresse e-mail que vous souhaitez rechercher.
+Notez qu'il est possible de ne renseigner que certaines données, par exemple juste une adresse mail ou une entreprise.
 Le programme effectuera ensuite une recherche Google à l'aide de la requête `intext:"{company_name}" OR intext:"{username}" OR intext:"{email}" site:linkedin.com OR site:glassdoor.com OR site:zoominfo.com site:facebook.com OR site:twitter.com OR site:instagram.com OR site:pinterest.com OR site:crunchbase.com OR site:hunter.io OR site:owler.com OR site:data.com OR site:hoovers.com site:*.example.com" OR site`
 
-Ce choix execute également un recherche qui prend en entrée un nom de domaine et effectue une recherche de différents types de fichiers liés à ce domaine (PDF, XLS, DOC, PPT, CSV) en utilisant différents opérateurs Google (site, intitle, inurl, filetype). Les résultats sont affichés à l'écran.
+Ce choix execute également une recherche qui prend en entrée un nom de domaine et effectue une recherche de différents types de fichiers liés à ce domaine (PDF, XLS, DOC, PPT, CSV) en utilisant différents opérateurs Google (site, intitle, inurl, filetype). Les résultats sont affichés à l'écran.
 
-Ces fonction peuvent être modifiée en fonction des besoins souhaité notamment en ajoutant des en-tête permettant d'utliser d'autre navigateur web, en modifiant les sites souhaités ainsi que le time sleep qui peux augmenter le nombre de résultats.
+Ces fonctions peuvent être modifiées en fonction des besoins souhaités notamment en ajoutant des en-têtes permettant d'utliser d'autre navigateur web, en modifiant les sites souhaités ainsi que le time sleep qui peut augmenter le nombre de résultats.
 Il est recommandé d'utiliser un proxy ou un VPN dans le but d'éviter tout blocage/banissement des navigateurs webs.
 
 Les résultats des scans sont exportés indépendamment dans un fichier texte, le chemin est affiché à la fin de chaque processus grâce à la définition `export_result3`
@@ -113,7 +113,7 @@ Les résultats des scans sont exportés indépendamment dans un fichier texte, l
 4. OSINT
 
 Cette option permet d'obtenir des informations sur un nom de domaine en utilisant la bibliothèque Python-whois.
-Pour lancer une recherche d'OSINT sur des nom de domaine, sélectionnez l'option correspondante dans le menu principal:
+Pour lancer une recherche d'OSINT sur des noms de domaine, sélectionnez l'option correspondante dans le menu principal:
 `2. OSINT` puis `2. Domaine et email`
 Cette fonction prend en entrée un nom de domaine et effectue une recherche WHOIS pour obtenir des informations sur ce domaine, telles que le nom de domaine, le registrar, la date d'expiration, la date de création, les serveurs de noms et le statut. Elle exporte également les résultats dans un fichier texte grâce à la définition `export_result2`.
 
@@ -125,12 +125,12 @@ Cette option permet de récupérer les adresses e-mail associées à un nom de d
 Cette option effectue une veille de la sécurité en extrayant les CVEC les plus récentes présentes sur le site Web de NIST (National Institute of Standards and Technology) et les exporte dans un fichier texte.
 Elle utilise la bibliothèque Beautifulsoup4 afin de pouvoir parser le code HTML souhaité.
 Il est donc possible de modifier le code afin de pouvoir parser d'autres sites en se référant aux différentes balises HTML présentes sur ce dernier.
-Cependant certains site n'autorise pas ce genre de méthode et peuvent donc bloquer la requête.
-Les résultats son exportés dans un fichier texte grâce à la définition `export_result3`.
+Cependant certains sites n'autorisent pas ce genre de méthode et peuvent donc bloquer la requête.
+Les résultats sont exportés dans un fichier texte grâce à la définition `export_result3`.
 
 
 ## Auteur
 
 Ce programme a été écrit par Charles Fresse et a été créé à des fins éducatives uniquement. Il est fourni "tel quel" sans aucune garantie. Veuillez utiliser ce programme de manière responsable et avec la permission des propriétaires des systèmes que vous scannez. L'auteur ne sera pas tenu responsable de toute utilisation abusive ou illégale de ce programme.
-De plus, certaines fonctionnalités peuvent être considérées comme intrusives ou illégales dans certaines juridictions. Il est de la responsabilité de l'utilisateur
+De plus, certaines fonctionnalités peuvent être considérées comme intrusives ou illégales dans certaines juridictions. Il est de la responsabilité de l'utilisateur.
 
